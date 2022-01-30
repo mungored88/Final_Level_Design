@@ -38,7 +38,9 @@ public class Player : Entity , ICollector, IDamageable, IObservable
     public float armor;
     PlayerController _control;
     PlayerView _playerView;
-    
+
+    [HideInInspector] public Faction faction;
+
     // Movement _movement;
     BattleMechanics _battleMechanics;
     SoundMananger _soundMananger;
@@ -68,13 +70,13 @@ public class Player : Entity , ICollector, IDamageable, IObservable
     private void Start()
     {
         // No va mas isMine, porque "son todos del server"
+        // TODO: hay que cambiar esto para fixear el audio entre players
         if (!photonView.IsMine)
         {
             // Disable other audio listeners
             FindObjectOfType<Player>().gameObject.GetComponent<AudioListener>().enabled = false;
             // disable other player's minimap
             minimapGameObject.SetActive(false);
-            return;
         }
     }
     
@@ -307,6 +309,7 @@ public class Player : Entity , ICollector, IDamageable, IObservable
     // DISABLED
     public void GetDamage(float dmg)
     {
+        // El server tiene que dañar al player
         // Llamado por el cliente
         // life -= dmg;
         // // playerUiM.LifeUpdate(life);
@@ -442,3 +445,8 @@ public class Player : Entity , ICollector, IDamageable, IObservable
 
 }
 
+public enum Faction
+{
+    MAFIA,
+    MONK
+}
