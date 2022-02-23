@@ -107,10 +107,15 @@ namespace redes.parcial_2
 
             // El nivel esta cargado en este punto
             // TODO: crear players de acuerdo a la cant de PlayerList
+            // TODO: Player belongs to one out of two factions (FACTION will be replaced with either Monk or Mafia)
+            // $"Player__FACTION__{player.ActorNumber}"
             Player newCharacter = PhotonNetwork
                 .Instantiate(characterPrefab.name, p1Position.position, Quaternion.identity)
                 .GetComponent<Player>()
                 .SetInitialParameters(player);
+            
+            // TODO: Set Faction. Update layers?
+            newCharacter.faction = Faction.MONK;
             newCharacter.enabled = false;
 
             Debug.Log($"--- [Server] Player {newCharacter.name} instanciado");
@@ -120,7 +125,7 @@ namespace redes.parcial_2
         /* REQUESTS (SERVERS AVATARES)*/
         public void RequestDamagePlayer(Photon.Realtime.Player player, float dmg)
         {
-            if (player != _server)
+            if (!Equals(player, _server))
             {
                 _dicModels[player].PlayerDamagedByServer(player, dmg);
                 //Debug.Log("--- [Cliente] Daño al player. Le envio el mensaje");

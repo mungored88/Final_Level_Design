@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
+using redes.parcial_2;
 using UnityEngine;
 
 public class Bullet : MonoBehaviourPun
@@ -31,8 +32,16 @@ public class Bullet : MonoBehaviourPun
 
     public virtual void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<IDamageable>() != null)
+        GameObject collidedGO = collision.gameObject;
+        if (collidedGO.GetComponent<IDamageable>() != null)
         {
+            if (collidedGO.layer == LayerMask.NameToLayer("PLAYER"))
+            {
+                Debug.Log("A bullet has hit the player!!!");
+                // Photon.Realtime.Player
+                FAServer.Instance.RequestDamagePlayer(collidedGO.GetComponent<Player>().GetOwner(), damage);
+            }
+            // TODO: llamar al server para que dañe al player
             collision.gameObject.GetComponent<IDamageable>().GetDamage(damage);
         }
 

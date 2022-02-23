@@ -17,7 +17,9 @@ public class PlayerController //ALL THE INPUT HERE
 
     public void OnUpdate()
     {
+        # if UNITY_EDITOR
         Debug.Log($"OnUpdate called by {_player.name}");
+        # endif
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
         
