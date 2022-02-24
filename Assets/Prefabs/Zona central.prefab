@@ -46714,6 +46714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roof
       objectReference: {fileID: 0}
+    - target: {fileID: 1447847685178664, guid: b4f11129d6b207d43bae5c6f1f73413e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4982467324983890, guid: b4f11129d6b207d43bae5c6f1f73413e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -323.47116
@@ -53185,6 +53189,10 @@ PrefabInstance:
     - target: {fileID: 1447847685178664, guid: b4f11129d6b207d43bae5c6f1f73413e, type: 3}
       propertyPath: m_Name
       value: roof (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1447847685178664, guid: b4f11129d6b207d43bae5c6f1f73413e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4982467324983890, guid: b4f11129d6b207d43bae5c6f1f73413e, type: 3}
       propertyPath: m_LocalPosition.x
