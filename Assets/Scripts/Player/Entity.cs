@@ -1,7 +1,6 @@
-﻿using Photon.Pun;
-using UnityEngine;
+﻿using UnityEngine;
 
-public abstract class Entity : MonoBehaviourPun
+public abstract class Entity : MonoBehaviour
 {
 
 }

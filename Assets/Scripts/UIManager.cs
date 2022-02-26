@@ -4,11 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
-using Photon.Pun;
-using redes.parcial_2;
-using UnityEngine.SceneManagement;
 
-public class UIManager : MonoBehaviourPun
+public class UIManager : MonoBehaviour
 {
 
     public Image[] Bull;
@@ -43,31 +40,30 @@ public class UIManager : MonoBehaviourPun
 
     public wincond winner;
 
-    public void SetUIManagerForClient(Player player)
+
+    private void Start()
     {
-        ActiveWeapon = player.ActiveWeapon;
-        wepHolder = player.weaponHolder;
-        ActiveGrenades = player.ActiveGrenades;
         
-        // TODO: Server should not set any of this
-        UpdateAmmoCount(ActiveWeapon.GetAmmo);
-        UpdateGranadeCount(ActiveGrenades.grenadeHolder);
+        _player = this.GetComponent<Player>();
+        ActiveWeapon = _player.ActiveWeapon;
+        wepHolder = _player.weaponHolder;
+        ActiveGrenades = _player.ActiveGrenades;
+
+      //  UpdateAmmoCount(ActiveWeapon.GetAmmo);
+      //  UpdateGranadeCount(ActiveGrenades.grenadeHolder);
 
 
-        player.onUpdateLife += LifeUpdate;
-        ActiveWeapon.onUpdateAmmo += UpdateAmmoCount;
-        wepHolder.onUpdateWeapon += WeaponChanged;
-        wepHolder.onUpdateWeapon += SelectWeaponSlot;
-        ActiveGrenades.onUpdateCount += UpdateGranadeCount;
+        _player.onUpdateLife += LifeUpdate;
+      //  ActiveWeapon.onUpdateAmmo += UpdateAmmoCount;
+       // wepHolder.onUpdateWeapon += WeaponChanged;
+       // wepHolder.onUpdateWeapon += SelectWeaponSlot;
+      //  ActiveGrenades.onUpdateCount += UpdateGranadeCount;
 
 
-        boxmedicine.OnGrab += ObjetiveTextMedicine;
-        boxfood.OnGrab += ObjetiveTextFood;
-    }
+       // boxmedicine.OnGrab += ObjetiveTextMedicine;
+      //  boxfood.OnGrab += ObjetiveTextFood;
 
-    public void SetPlayer(Player player)
-    {
-        _player = player;
+      
     }
 
     public void UpdateAmmoCount(Ammo ammo)
@@ -114,9 +110,7 @@ public class UIManager : MonoBehaviourPun
         if (wep.IsPrimary) { Selected[0].enabled = true; Selected[1].enabled = false; }
         else{ Selected[1].enabled = true; Selected[0].enabled = false; }
     }
-    public void LifeUpdate(float life)
-    {
-        if (life < 0) return;
+    public void LifeUpdate(float life){
         this.life.text = life.ToString();
     }
     public void UpdateGranadeCount(int[] grenadeCount)
@@ -130,23 +124,16 @@ public class UIManager : MonoBehaviourPun
     }
     public void ObjetiveTextFood()
     {
-        //morfi.fontStyle = FontStyles.Strikethrough;
-        
-        photonView.RPC("ObjetiveCompleted", RpcTarget.AllViaServer);
-        //ObjetiveCompleted();
+        morfi.fontStyle = FontStyles.Strikethrough;
+        ObjetiveCompleted();
     }
-    
-    [PunRPC]
     public void ObjetiveCompleted()
     {
-        // Let's win here!
-        SceneManager.LoadScene("win");
-        
-        //if(morfi.fontStyle == FontStyles.Strikethrough && medicina.fontStyle == FontStyles.Strikethrough)
-        //{
-        //    volveBase.enabled = true;
-        //    winner.gameObject.SetActive(true);
-        //}
+        if(morfi.fontStyle == FontStyles.Strikethrough && medicina.fontStyle == FontStyles.Strikethrough)
+        {
+            volveBase.enabled = true;
+            winner.gameObject.SetActive(true);
+        }
     }
        
 }

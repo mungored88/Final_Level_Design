@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Photon.Pun;
 using UnityEngine;
 
 public class Deagle : Weapon
@@ -24,21 +23,7 @@ public class Deagle : Weapon
 
         this.Name = this.GetType().Name;
         this.IsPrimary = false;
-    }
-    
-    public override void GrabThis()
-    {
-        base.GrabThis();
-        photonView.RPC("HideWeapon", RpcTarget.AllViaServer);
-        //Collect(this);
-        //HideWeapon();
-        //_weaponSoundMananger.Grab();
-    }
 
-    [PunRPC]
-    protected override void HideWeapon()
-    {
-        this.GetComponent<MeshRenderer>().enabled = false;
-        this.GetComponent<SphereCollider>().enabled = false;
+
     }
 }

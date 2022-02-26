@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Photon.Pun;
 using UnityEngine;
 
-public abstract class Grenade : MonoBehaviourPun
+public abstract class Grenade : MonoBehaviour
 {
 
     public float range = 30f;

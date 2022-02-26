@@ -5,7 +5,7 @@ public class Hostage : Entity
 {
 
     public Entity _player;
-    public MoveToPlayer follow;
+    //public MoveToPlayer follow;
     public bool _follow;
     public AudioSource okLetsGO;
     public void Start()
