@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: nieveShaderMat
+  m_Shader: {fileID: 4800000, guid: 64e92f4253238e743a68323939d67940, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: f9d3480344f391645a699a51c0dd4552, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ground:
+        m_Texture: {fileID: 2800000, guid: 70f6b0071d13f1243ad88c815f71136d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _rt:
+        m_Texture: {fileID: 8400000, guid: 3aa5eb07d2e44c34689575b8442fe346, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _snow:
+        m_Texture: {fileID: 2800000, guid: 70f6b0071d13f1243ad88c815f71136d, type: 3}
+        m_Scale: {x: 8, y: 6}
+        m_Offset: {x: 0.03, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _EdgeLength: 35
+    - _Float0: -1.14
+    - __dirty: 0
+    - _altura: 0.92
+    m_Colors:
+    - _Color0: {r: 0.7643734, g: 0.7960573, b: 0.8396226, a: 0}
