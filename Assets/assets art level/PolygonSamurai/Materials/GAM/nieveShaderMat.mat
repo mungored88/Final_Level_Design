@@ -43,6 +43,6 @@ Material:
     - _EdgeLength: 35
     - _Float0: -1.14
     - __dirty: 0
-    - _altura: 0.92
+    - _altura: 0.8
     m_Colors:
     - _Color0: {r: 0.7643734, g: 0.7960573, b: 0.8396226, a: 0}
