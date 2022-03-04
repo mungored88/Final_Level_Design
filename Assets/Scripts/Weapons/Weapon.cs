@@ -115,6 +115,9 @@ public abstract class Weapon : MonoBehaviour , IInteractable, ICollectable<Weapo
         if (Physics.Raycast(ray, out raycastHit, length, mask))
         {
             endPosition = raycastHit.point;
+
+            if(raycastHit.collider.GetComponent<DestroyableObject>() != null)
+                raycastHit.collider.gameObject.GetComponent<DestroyableObject>().DestroyObject();
         }
 
         laserLineRenderer[actualShoot % laserLineRenderer.Length].SetPosition(0, bulletOrigin.position);
