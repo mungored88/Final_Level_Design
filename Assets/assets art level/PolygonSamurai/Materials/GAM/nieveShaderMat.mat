@@ -42,7 +42,7 @@ Material:
     m_Floats:
     - _EdgeLength: 35
     - _Float0: -1.14
-    - __dirty: 0
+    - __dirty: 1
     - _altura: 0.9
     m_Colors:
     - _Color0: {r: 0.7643734, g: 0.7960573, b: 0.8396226, a: 0}

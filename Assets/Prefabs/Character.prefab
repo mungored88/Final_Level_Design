@@ -1351,6 +1351,7 @@ Transform:
   - {fileID: 5399652181299809839}
   - {fileID: 4571385980645905516}
   - {fileID: 169626595181299318}
+  - {fileID: 2499600344621268340}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1644,6 +1645,7 @@ MonoBehaviour:
   isGrounded: 1
   isSnow: 0
   isRolling: 0
+  activeZone: default
   canAttack: 1
   isReloading: 0
   isShooting: 0
@@ -1663,6 +1665,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   CtSpawn: {fileID: 0}
   MafiaSpawn: {fileID: 0}
+  mapa: {fileID: 0}
 --- !u!81 &984457047
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3674,33 +3677,6 @@ Transform:
   m_Father: {fileID: 6443247267145292892}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1152732638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6444482973016933404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84777d12e3a71fc44849b63e1045e958, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootSound: {fileID: 0}
-  reloadSound: {fileID: 0}
-  noAmmoSound: {fileID: 0}
-  grabSound: {fileID: 0}
-  laserLineRenderer:
-  - {fileID: 1400441187}
-  - {fileID: 1349174732}
-  - {fileID: 430149491}
-  - {fileID: 1708453771}
-  - {fileID: 297003415}
-  actualShoot: 0
-  _player: {fileID: 0}
-  mask:
-    serializedVersion: 2
-    m_Bits: 228887
 --- !u!120 &809300491
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -3797,6 +3773,33 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &1152732638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6444482973016933404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84777d12e3a71fc44849b63e1045e958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootSound: {fileID: 0}
+  reloadSound: {fileID: 0}
+  noAmmoSound: {fileID: 0}
+  grabSound: {fileID: 0}
+  laserLineRenderer:
+  - {fileID: 1400441187}
+  - {fileID: 1349174732}
+  - {fileID: 430149491}
+  - {fileID: 1708453771}
+  - {fileID: 297003415}
+  actualShoot: 0
+  _player: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 228887
 --- !u!1 &6734514476624394632
 GameObject:
   m_ObjectHideFlags: 0
@@ -4031,6 +4034,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 169626595377266756, guid: 874785071e1b95345b79770ebc64e7a8,
     type: 3}
   m_PrefabInstance: {fileID: 936789554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1184206447
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6443247267145292856}
+    m_Modifications:
+    - target: {fileID: 2499600345652376341, guid: b4a5504620b6b0748afb09ba4ea6b959,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499600345652376346, guid: b4a5504620b6b0748afb09ba4ea6b959,
+        type: 3}
+      propertyPath: m_Name
+      value: Snow Sphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499600345652376347, guid: b4a5504620b6b0748afb09ba4ea6b959,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.238
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499600345652376347, guid: b4a5504620b6b0748afb09ba4ea6b959,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.229
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499600345652376347, guid: b4a5504620b6b0748afb09ba4ea6b959,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.364
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499600345652376347, guid: b4a5504620b6b0748afb09ba4ea6b959,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499600345652376347, guid: b4a5504620b6b0748afb09ba4ea6b959,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499600345652376347, guid: b4a5504620b6b0748afb09ba4ea6b959,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499600345652376347, guid: b4a5504620b6b0748afb09ba4ea6b959,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499600345652376347, guid: b4a5504620b6b0748afb09ba4ea6b959,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499600345652376347, guid: b4a5504620b6b0748afb09ba4ea6b959,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499600345652376347, guid: b4a5504620b6b0748afb09ba4ea6b959,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499600345652376347, guid: b4a5504620b6b0748afb09ba4ea6b959,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b4a5504620b6b0748afb09ba4ea6b959, type: 3}
+--- !u!4 &2499600344621268340 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2499600345652376347, guid: b4a5504620b6b0748afb09ba4ea6b959,
+    type: 3}
+  m_PrefabInstance: {fileID: 1184206447}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &974708363206879992
 PrefabInstance:
