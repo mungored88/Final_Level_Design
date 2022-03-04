@@ -51,6 +51,8 @@ public class Player : Entity , ICollector, IDamageable, IObservable
     public Transform CtSpawn;
     public Transform MafiaSpawn;
 
+    public GameObject mapa;
+
     private void Start()
     {
         Cursor.visible = false;
@@ -86,8 +88,15 @@ public class Player : Entity , ICollector, IDamageable, IObservable
         _control.OnUpdate();
 
         //FORDEBUG
-        //if (Input.GetKeyDown(KeyCode.F1)) { this.transform.position = CtSpawn.position; }
-        //if (Input.GetKeyDown(KeyCode.F2)) { this.transform.position = MafiaSpawn.position; }  
+        if (Input.GetKeyDown(KeyCode.F1)) { this.transform.position = CtSpawn.position; }
+        if (Input.GetKeyDown(KeyCode.F2)) { this.transform.position = MafiaSpawn.position; }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            if (mapa.active) { mapa.SetActive(false); }
+            else mapa.SetActive(true);
+        }
+
         if (Input.GetKeyDown(KeyCode.B)) { GetDamage(25); }
 
      
