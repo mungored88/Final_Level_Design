@@ -16,8 +16,11 @@ public class fogOfWarTrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) { 
-            foreach(GameObject child in childrens)
+        if (other.CompareTag("Player")) {
+            bool thisIsSnowObject = this.gameObject.layer == 18;
+            Debug.Log(this.gameObject.layer);
+            other.GetComponent<Player>().isSnow = thisIsSnowObject;
+            foreach (GameObject child in childrens)
             {
                 child.SetActive(false);
             }

@@ -111,7 +111,7 @@ public abstract class Weapon : MonoBehaviour , IInteractable, ICollectable<Weapo
         if (ammo.AMMO <= 0) { _weaponSoundMananger.NoAmmo(); return; }
 
         Bullet b = BulletSpawner.Instance.pool.GetObject().SetPosition(bulletOrigin);
-        ammo.AMMO--;
+        //ammo.AMMO--;
         onUpdateAmmo(ammo);
         _weaponSoundMananger.Shoot();
 

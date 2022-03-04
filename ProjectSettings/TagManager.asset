@@ -26,8 +26,8 @@ TagManager:
   - WIN
   - PLAYER
   - SnowRT
-  - 
-  - 
+  - IS_SNOW
+  - IS_GROUND
   - 
   - 
   - 

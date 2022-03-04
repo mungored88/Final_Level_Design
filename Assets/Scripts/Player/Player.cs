@@ -8,6 +8,7 @@ public class Player : Entity , ICollector, IDamageable, IObservable
     [Header("Movement")]
     public float speed;
     public bool isGrounded;
+    public bool isSnow = false;
     public bool isRolling = false;
 
     [Header("Battle")]
