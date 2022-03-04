@@ -4,17 +4,33 @@ using UnityEngine;
 
 public class fogOfWarTrigger : MonoBehaviour
 {
-    MeshRenderer mesh;
+    List<GameObject> childrens = new List<GameObject>();
     private void Start()
     {
-        mesh = this.GetComponent<MeshRenderer>();
+        for (int i = 0; i < this.transform.childCount; i++)
+        {
+            var child = this.transform.GetChild(i).gameObject;
+            if (child != null)
+                childrens.Add(child);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player")) this.mesh.enabled = false;
+        if (other.CompareTag("Player")) { 
+            foreach(GameObject child in childrens)
+            {
+                child.SetActive(false);
+            }
+        };
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player")) this.mesh.enabled = true;
+        if (other.CompareTag("Player"))
+        {
+            foreach (GameObject child in childrens)
+            {
+                child.SetActive(true);
+            }
+        };
     }
 }
