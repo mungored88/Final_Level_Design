@@ -700,7 +700,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7010071530750899616}
   - component: {fileID: 7010071531528279473}
-  m_Layer: 0
+  - component: {fileID: 2608652518919599365}
+  m_Layer: 19
   m_Name: deposito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -735,6 +736,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 18.046265, y: 13.566406, z: 54.00505}
   m_Center: {x: -30.841797, y: -28.359009, z: 123.44926}
+--- !u!114 &2608652518919599365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010071530750899617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7010071530794464198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,7 +1129,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7010071530836601588}
   - component: {fileID: 7010071531528279472}
-  m_Layer: 0
+  - component: {fileID: 8692952992215941861}
+  m_Layer: 19
   m_Name: placard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1151,6 +1165,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 22.672852, y: 13.422913, z: 30.494232}
   m_Center: {x: -32.84442, y: -28.795563, z: 111.61528}
+--- !u!114 &8692952992215941861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010071530836601589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7010071530876229570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,7 +1746,8 @@ GameObject:
   - component: {fileID: 7010071531528279476}
   - component: {fileID: 7010071531528279475}
   - component: {fileID: 7010071531528279474}
-  m_Layer: 0
+  - component: {fileID: 7832631327065020696}
+  m_Layer: 18
   m_Name: exterior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1804,6 +1831,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 98.73935, y: 13.412109, z: 109.201355}
   m_Center: {x: -166.36781, y: -25.514954, z: 301.6666}
+--- !u!114 &7832631327065020696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010071530993609461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7010071531055383375
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,7 +2318,8 @@ GameObject:
   - component: {fileID: 7010071531301127205}
   - component: {fileID: 7010071531528279471}
   - component: {fileID: 7010071531528279470}
-  m_Layer: 0
+  - component: {fileID: 6082043562234059953}
+  m_Layer: 19
   m_Name: pasillo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2332,6 +2372,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 35.242126, y: 13.422913, z: 38.7305}
   m_Center: {x: -67.9245, y: -28.795563, z: 197.24425}
+--- !u!114 &6082043562234059953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010071531301127206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7010071531325679228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2621,7 +2673,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7010071531398067747}
   - component: {fileID: 7010071531528279464}
-  m_Layer: 0
+  - component: {fileID: 4606690507643569087}
+  m_Layer: 19
   m_Name: pasillito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2656,6 +2709,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.113312, y: 13.422913, z: 61.728973}
   m_Center: {x: -80.671646, y: -28.795563, z: 235.5519}
+--- !u!114 &4606690507643569087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010071531398067748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7010071531420316581
 GameObject:
   m_ObjectHideFlags: 0
@@ -2666,7 +2731,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7010071531420316580}
   - component: {fileID: 7010071531528279469}
-  m_Layer: 0
+  - component: {fileID: 3979970953234610710}
+  m_Layer: 18
   m_Name: patio interior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2701,6 +2767,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 84.82507, y: 13.422913, z: 71.18036}
   m_Center: {x: -43.88022, y: -28.795563, z: 252.177}
+--- !u!114 &3979970953234610710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010071531420316581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7010071531522314397
 GameObject:
   m_ObjectHideFlags: 0
@@ -3175,7 +3253,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7010071531862077371}
   - component: {fileID: 7010071531528279465}
-  m_Layer: 0
+  - component: {fileID: 4597023338914191679}
+  m_Layer: 18
   m_Name: patio fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3210,6 +3289,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 45.716278, y: 13.422913, z: 72.34961}
   m_Center: {x: -63.304367, y: -28.795563, z: 242.6388}
+--- !u!114 &4597023338914191679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010071531862077372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7010071531873692177
 GameObject:
   m_ObjectHideFlags: 0
@@ -3499,7 +3590,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7010071532006784724}
   - component: {fileID: 7010071531528279468}
-  m_Layer: 0
+  - component: {fileID: 3023460046603743615}
+  m_Layer: 19
   m_Name: oficina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3534,6 +3626,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 60.5961, y: 13.422913, z: 68.613525}
   m_Center: {x: -55.374283, y: -28.795563, z: 253.10254}
+--- !u!114 &3023460046603743615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010071532006784725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7010071532014980493
 GameObject:
   m_ObjectHideFlags: 0
@@ -3637,7 +3741,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7010071532208931030}
   - component: {fileID: 7010071531528279467}
-  m_Layer: 0
+  - component: {fileID: 6639446661712279383}
+  m_Layer: 19
   m_Name: museo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3672,6 +3777,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 57.43991, y: 13.422913, z: 65.17468}
   m_Center: {x: -57.954025, y: -28.795563, z: 255.18427}
+--- !u!114 &6639446661712279383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010071532208931031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7010071532258771707
 GameObject:
   m_ObjectHideFlags: 0
@@ -3776,7 +3893,8 @@ GameObject:
   - component: {fileID: 7010071532261772683}
   - component: {fileID: 7010071531528279461}
   - component: {fileID: 7010071531528279460}
-  m_Layer: 0
+  - component: {fileID: 270370845901154470}
+  m_Layer: 18
   m_Name: templo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3830,6 +3948,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 90.11133, y: 13.422913, z: 49.35022}
   m_Center: {x: -58.56897, y: -28.795563, z: 194.21005}
+--- !u!114 &270370845901154470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010071532261772684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7010071532371911547
 GameObject:
   m_ObjectHideFlags: 0
@@ -3841,7 +3971,8 @@ GameObject:
   - component: {fileID: 7010071532371911546}
   - component: {fileID: 7010071531528279463}
   - component: {fileID: 7010071531528279462}
-  m_Layer: 0
+  - component: {fileID: 7110008097856806714}
+  m_Layer: 19
   m_Name: big buda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3894,6 +4025,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 37.15503, y: 13.422913, z: 31.895874}
   m_Center: {x: -19.534851, y: -28.795563, z: 202.43857}
+--- !u!114 &7110008097856806714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010071532371911547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7010071532404253985
 GameObject:
   m_ObjectHideFlags: 0
@@ -4090,7 +4233,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7010071532455454617}
   - component: {fileID: 7010071531528279466}
-  m_Layer: 0
+  - component: {fileID: 4797215408320929243}
+  m_Layer: 19
   m_Name: hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4125,6 +4269,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 92.75026, y: 13.422913, z: 81.63327}
   m_Center: {x: -39.85505, y: -28.795563, z: 246.99318}
+--- !u!114 &4797215408320929243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010071532455454618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7010071532464048656
 GameObject:
   m_ObjectHideFlags: 0

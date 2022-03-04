@@ -13,7 +13,13 @@ public abstract class Weapon : MonoBehaviour , IInteractable, ICollectable<Weapo
     public AudioSource grabSound;
     WeaponSoundMananger _weaponSoundMananger;
 
-    
+    public LineRenderer[] laserLineRenderer;
+    public int actualShoot = 0;
+    public Player _player;
+    public LayerMask mask = new LayerMask();
+
+
+
     protected Ammo ammo;
     protected Bullet bullet;
     protected float realoadTime = 2;
@@ -67,6 +73,11 @@ public abstract class Weapon : MonoBehaviour , IInteractable, ICollectable<Weapo
         _weaponSoundMananger = new WeaponSoundMananger(this);
     }
 
+    private void Start()
+    {
+        _player = this.GetComponentInParent<Player>();
+    }
+
 
     public void GrabThis()
     {
@@ -94,10 +105,41 @@ public abstract class Weapon : MonoBehaviour , IInteractable, ICollectable<Weapo
 
     public void Shoot()
     {
-        if (myCurrentFiringMode != null)
+        Vector3 direction = _player.transform.TransformDirection(Vector3.forward);
+        float length = 500f;
+
+        Ray ray = new Ray(bulletOrigin.position, direction);
+        RaycastHit raycastHit;
+        Vector3 endPosition = bulletOrigin.position + (length * direction);
+
+        if (Physics.Raycast(ray, out raycastHit, length, mask))
         {
-            shooting = StartCoroutine(myCurrentFiringMode.Shoot(shoot));
+            endPosition = raycastHit.point;
         }
+
+        laserLineRenderer[actualShoot % laserLineRenderer.Length].SetPosition(0, bulletOrigin.position);
+        laserLineRenderer[actualShoot% laserLineRenderer.Length].SetPosition(1, endPosition);
+        actualShoot++;
+
+
+        //RaycastHit hit;
+        //// Does the ray intersect any objects excluding the player layer
+        //if (Physics.Raycast(bulletOrigin.position, bulletOrigin.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
+        //{
+        //    Debug.DrawRay(bulletOrigin.position, bulletOrigin.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+        //    Debug.Log("Did Hit");
+        //}
+        //else
+        //{
+        //    Debug.DrawRay(bulletOrigin.position, bulletOrigin.TransformDirection(Vector3.forward) * 1000, Color.white);
+        //    Debug.Log("Did not Hit");
+        //}
+
+
+        //if (myCurrentFiringMode != null)
+        //{
+        //    shooting = StartCoroutine(myCurrentFiringMode.Shoot(shoot));
+        //}
     }
 
     public void StopShoot()
