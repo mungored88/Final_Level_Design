@@ -22,24 +22,41 @@ public class fogOfWarTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player")) {
             if (!_player) _player = other.GetComponent<Player>();
+
+            //forSounds
             bool thisIsSnowObject = this.gameObject.layer == 18;
             _player.isSnow = thisIsSnowObject;
 
-                foreach (GameObject child in childrens)
-                {
-                    child.SetActive(false);
-                }
+            _player.activeZone = this.gameObject.tag;
+            //
 
+            activarZone();
         };
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
-        { 
-            foreach (GameObject child in childrens)
-            {
-                child.SetActive(true);
-            }
+        {
+            desactivarZone();
+            if (_player.activeZone == this.gameObject.tag) activarZone();
         };
+    }
+
+
+    void activarZone()
+    {
+
+        foreach (GameObject child in childrens)
+        {
+            child.SetActive(false);
+        }
+    }
+
+    void desactivarZone()
+    {
+        foreach (GameObject child in childrens)
+        {
+            child.SetActive(true);
+        }
     }
 }

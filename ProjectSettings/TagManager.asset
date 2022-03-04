@@ -7,6 +7,19 @@ TagManager:
   - Shootable
   - Floor
   - Wall
+  - Bullet
+  - Ground
+  - Exterior
+  - Hall
+  - Deposito
+  - Placard
+  - Pasillo
+  - PatioInterior
+  - Oficina
+  - Museo
+  - BigBuda
+  - PatioFondo
+  - Templo
   layers:
   - Default
   - TransparentFX

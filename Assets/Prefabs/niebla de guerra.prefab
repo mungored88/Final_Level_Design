@@ -305,11 +305,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7010071530563580554}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -80.66, y: -27.872, z: 235.55}
+  m_LocalPosition: {x: -50.760014, y: -27.87201, z: 297.75}
   m_LocalScale: {x: 11.10157, y: 17.031595, z: 61.378593}
   m_Children: []
-  m_Father: {fileID: 7010071531398067747}
-  m_RootOrder: 0
+  m_Father: {fileID: 7010071532371911546}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7010071530563580598
 MeshFilter:
@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 2608652518919599365}
   m_Layer: 19
   m_Name: deposito
-  m_TagString: Untagged
+  m_TagString: Deposito
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -748,6 +748,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  nameOfZone: 
 --- !u!1 &7010071530794464198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1134,7 @@ GameObject:
   - component: {fileID: 8692952992215941861}
   m_Layer: 19
   m_Name: placard
-  m_TagString: Untagged
+  m_TagString: Placard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1177,6 +1179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  nameOfZone: 
 --- !u!1 &7010071530876229570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,7 +1753,7 @@ GameObject:
   - component: {fileID: 7832631327065020696}
   m_Layer: 18
   m_Name: exterior
-  m_TagString: Untagged
+  m_TagString: Exterior
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1843,6 +1847,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  nameOfZone: 
 --- !u!1 &7010071531055383375
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,7 +2327,7 @@ GameObject:
   - component: {fileID: 6082043562234059953}
   m_Layer: 19
   m_Name: pasillo
-  m_TagString: Untagged
+  m_TagString: Pasillo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2384,6 +2390,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  nameOfZone: 
 --- !u!1 &7010071531325679228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2680,7 +2688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7010071531398067747
 Transform:
   m_ObjectHideFlags: 0
@@ -2691,8 +2699,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 92.6, y: 0, z: 232.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 7010071530563580553}
+  m_Children: []
   m_Father: {fileID: 7010071530683789087}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2721,6 +2728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  nameOfZone: 
 --- !u!1 &7010071531420316581
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,7 +2743,7 @@ GameObject:
   - component: {fileID: 3979970953234610710}
   m_Layer: 18
   m_Name: patio interior
-  m_TagString: Untagged
+  m_TagString: PatioInterior
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2779,6 +2788,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  nameOfZone: 
 --- !u!1 &7010071531522314397
 GameObject:
   m_ObjectHideFlags: 0
@@ -3256,7 +3267,7 @@ GameObject:
   - component: {fileID: 4597023338914191679}
   m_Layer: 18
   m_Name: patio fondo
-  m_TagString: Untagged
+  m_TagString: PatioFondo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3301,6 +3312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  nameOfZone: 
 --- !u!1 &7010071531873692177
 GameObject:
   m_ObjectHideFlags: 0
@@ -3593,7 +3606,7 @@ GameObject:
   - component: {fileID: 3023460046603743615}
   m_Layer: 19
   m_Name: oficina
-  m_TagString: Untagged
+  m_TagString: Oficina
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3638,6 +3651,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  nameOfZone: 
 --- !u!1 &7010071532014980493
 GameObject:
   m_ObjectHideFlags: 0
@@ -3744,7 +3759,7 @@ GameObject:
   - component: {fileID: 6639446661712279383}
   m_Layer: 19
   m_Name: museo
-  m_TagString: Untagged
+  m_TagString: Museo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3789,6 +3804,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  nameOfZone: 
 --- !u!1 &7010071532258771707
 GameObject:
   m_ObjectHideFlags: 0
@@ -3896,7 +3913,7 @@ GameObject:
   - component: {fileID: 270370845901154470}
   m_Layer: 18
   m_Name: templo
-  m_TagString: Untagged
+  m_TagString: Templo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3960,6 +3977,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  nameOfZone: 
 --- !u!1 &7010071532371911547
 GameObject:
   m_ObjectHideFlags: 0
@@ -3972,9 +3991,11 @@ GameObject:
   - component: {fileID: 7010071531528279463}
   - component: {fileID: 7010071531528279462}
   - component: {fileID: 7110008097856806714}
+  - component: {fileID: 748584125526385288}
+  - component: {fileID: 1402835641}
   m_Layer: 19
   m_Name: big buda
-  m_TagString: Untagged
+  m_TagString: BigBuda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3996,6 +4017,7 @@ Transform:
   - {fileID: 7010071530485646357}
   - {fileID: 7010071530794470508}
   - {fileID: 7010071530825933720}
+  - {fileID: 7010071530563580553}
   m_Father: {fileID: 7010071530683789087}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4037,6 +4059,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  nameOfZone: 
+--- !u!65 &748584125526385288
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010071532371911547}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.113312, y: 13.422913, z: 61.728973}
+  m_Center: {x: -80.671646, y: -28.795563, z: 235.5519}
+--- !u!65 &1402835641
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010071532371911547}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.596832, y: 18.128174, z: 62.04248}
+  m_Center: {x: -50.988937, y: -29.839966, z: 297.87927}
 --- !u!1 &7010071532404253985
 GameObject:
   m_ObjectHideFlags: 0
@@ -4236,7 +4286,7 @@ GameObject:
   - component: {fileID: 4797215408320929243}
   m_Layer: 19
   m_Name: hall
-  m_TagString: Untagged
+  m_TagString: Hall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4281,6 +4331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f02c4290cf91c4a888fd5b7c7addbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  nameOfZone: 
 --- !u!1 &7010071532464048656
 GameObject:
   m_ObjectHideFlags: 0

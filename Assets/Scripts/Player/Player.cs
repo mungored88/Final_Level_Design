@@ -11,6 +11,8 @@ public class Player : Entity , ICollector, IDamageable, IObservable
     public bool isSnow = false;
     public bool isRolling = false;
 
+    public string activeZone = "default";
+
     [Header("Battle")]
     public bool canAttack;
     public bool isReloading;
@@ -132,8 +134,12 @@ public class Player : Entity , ICollector, IDamageable, IObservable
     }
     internal void ChangeMovementMode(MovementMode mm)
     {
-        if (mm == MovementMode.CROUCHED) _playerView.animator.Crouch(true);
-        else _playerView.animator.Crouch(false);
+        if (mm == MovementMode.CROUCHED) { _playerView.animator.Crouch(true);
+            this.speed = this.speed / 2;
+        }
+        else { _playerView.animator.Crouch(false);
+            this.speed = this.speed * 2;
+        };
       //  _movement.ChangeMovementMode(mm);
 
     }
